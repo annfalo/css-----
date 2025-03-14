@@ -991,4 +991,41 @@ input.e_btn {
   input.e_btn {
     padding: 0 70px;
   }
+}
+a.e_btn + a.e_btn,
+a.e_btn + button.e_btn,
+a.e_btn + input.e_btn,
+button.e_btn + a.e_btn,
+button.e_btn + button.e_btn,
+button.e_btn + input.e_btn,
+input.e_btn + a.e_btn,
+input.e_btn + button.e_btn,
+input.e_btn + input.e_btn {
+  margin-left: 10px;
+}
+a.e_btn.white,
+button.e_btn.white,
+input.e_btn.white {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+a.e_btn.white:hover,
+button.e_btn.white:hover,
+input.e_btn.white:hover {
+  color: #fff;
+  background-color: #000;
+}
+a.e_btn.brown,
+button.e_btn.brown,
+input.e_btn.brown {
+  background-color: #3e2b00;
+  color: #fff;
+  border: 1px solid #3e2b00;
+}
+a.e_btn.brown:hover,
+button.e_btn.brown:hover,
+input.e_btn.brown:hover {
+  color: #3e2b00;
+  background-color: #fff;
 }/*# sourceMappingURL=style.css.map */

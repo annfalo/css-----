@@ -21,5 +21,32 @@ input {
         @include desktop {
             padding: 0 70px;
         }
+
+        &+& {
+            margin-left: 10px;
+        }
+
+        //色
+        &.white {
+            color: #000;
+            background-color: #fff;
+            border: 1px solid #000;
+
+            &:hover {
+                color: #fff;
+                background-color: #000;
+            }
+        }
+
+        &.brown {
+            background-color: $color_primary;
+            color: #fff;
+            border: 1px solid $color_primary;
+
+            &:hover {
+                color: $color_primary;
+                background-color: #fff;
+            }
+        }
     }
 }
