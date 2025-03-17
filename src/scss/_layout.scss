@@ -286,7 +286,7 @@
 // パンくずリスト
 .l_breadcrumb {
     padding: 16px 20px 22px;
-    background-color: $color_bg_dark;
+    background-color: #e2ded4;
 
 
     @include desktop {
@@ -360,14 +360,17 @@
             flex-direction: column;
 
             &+& {
-                margin-top: 30px;
-
-                @include desktop {
-                    margin-top: 0;
-                    margin-left: 50px;
-                    flex-direction: row
+                @include touch {
+                    margin-top: 30px;
                 }
             }
+
+            @include desktop {
+                margin-top: 0;
+                margin-left: 50px;
+                flex-direction: row
+            }
+
         }
 
         &Name {

@@ -18,35 +18,8 @@
     <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-
-
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org/",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "HOME",
-                "item": "https://example.com"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Online Shop",
-                "item": "https://example.com/online-shop/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "スタッフ おまかせアレンジ",
-                "item": "https://example.com/online-shop/item1"
-            }
-        ]
-    }
-    </script>
 </head>
+
 
 <body>
     <div class="l_container">
@@ -85,67 +58,33 @@
             </ul>
         </div>
 
-        <main>
-            <div class="l_main">
-                <section class="c_detail">
-                    <div class="c_detail__inner">
-                        <!-- メイン -->
-                        <div class="detail__main">
-                            <!-- スライド　 -->
-                            <div class="swiper swiper-container c_detail__slide">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"></div>
-                                </div>
-                            </div>
-                            <!-- サムネイル -->
-                            <div class="swiper swiper-container c_detail__thumbs">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"></div>
-                                </div>
-                            </div>
-                        </div>
+        <main class="l_main">
+            <div class="l_container">
 
-                        <!-- コンテンツ -->
-                        <div class="c_detail__contents">
-                            <div class="c_detail__info">
-                                <h1 class="c_detail__title">スタッフ おまかせアレンジ</h1>
-                                <p class="c_detail__sub">季節のお花をお楽しみいただけます</p>
-                                <div class="c_detail__price">¥3,800</div>
-                                <p class="c_detail__lead">大輪で華やかな季節のお花と、小分けにして飾りやすい小花を組み合わせたアレンジです。お好みの色で花束をお作りいたします。
-                                </p>
-                                <div class="c_detail__btn">
-                                    <a href="cart.html" class="e_btn brown">カートに入れる</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
-                <section class="c_point">
-                    <div class="c_point__inner">
-                        <ol class="c_point__list">
-                            <li class="c_point__item">
-                                <h2 class="c_point__itemTitle">POINT1
-                                    イメージからアレンジ</h2>
-                                <p class="c_point__itemText">ナチュラル・シンプル・ゴージャスからイメージをお選びいただいて、当店スタッフが花の種類をアレンジいたします。</p>
-                            </li>
-                            <li class="c_point__item">
-                                <h2 class="c_point__itemTitle">
-                                    POINT2
-                                    満足できるボリューム</h2>
-                                <p class="c_point__itemText">ボリュームたっぷりでシンプルな空間に映える花束です。配達前にお写真をメールいたします。</p>
-                            </li>
-                            <li class="c_point__item">
-                                <h2 class="c_point__itemTitle">POINT3
-                                    花束・BOXをセレクト</h2>
-                                <p class="c_point__itemText">ボリュームたっぷりでシンプルな空間に映える花束です。配達前にお写真をメールいたします。</p>
-                            </li>
-                        </ol>
+                <section class="c_section c_memberLogin">
+                    <div class="c_section__header">
+                        <h2 class="c_section__headerTitle">Member Login</h2>
                     </div>
+                    <form class="c_form" action="">
+                        <div class="c_form__group">
+                            <label for="member_id " class="c_form__label">会員ID/メールアドレス</label>
+                            <input type="text" class="c_form__input" id="member_id" name="member_id"
+                                placeholder="テキストが入ります。" autocapitalize="none" autocorrect="off" spellcheck="false"
+                                required>
+                        </div>
+                        <div class="c_form__group">
+                            <label for="member_password" class="c_form__label">パスワード</label>
+                            <input type="password" id="member_password" name="member_password" required>
+                        </div>
+                        <div class="e_btnWrap">
+                            <button class="e_btn _brown" type="button">ログインして購入する</button>
+                            <p class="e_btnWrap__note"><a href="#">新規会員登録して購入する</a></p>
+                        </div>
+                    </form>
                 </section>
             </div>
         </main>
-
         <footer class="l_footer">
             <div class="l_footer__inner">
                 <nav class="l_footer__nav">
@@ -180,12 +119,11 @@
             </div>
         </footer>
     </div>
-    <!-- コンテンツ記述部分 -->
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

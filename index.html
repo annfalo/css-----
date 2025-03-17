@@ -100,8 +100,23 @@
                                 <!-- デフォルト画像 -->
                                 <img src="assets/img/kv/main01.jpg" alt="About Flower">
                             </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <!-- WebP画像を優先 -->
+                                <source type="image/webp" srcset="assets/img/kv/main02.webp">
 
+                                <!-- 画面幅が980px以上で表示 -->
+                                <source media="(min-width: 980px)"
+                                    srcset="assets/img/kv/main02.jpg 1x, assets/img/kv/main01@2x.jpg 2x">
 
+                                <!-- 画面幅が979px以下で表示 -->
+                                <source media="(max-width: 979px)"
+                                    srcset="assets/img/kv/main02_sp.webp 1x, assets/img/kv/main01_sp@2x.jpg 2x">
+
+                                <!-- デフォルト画像 -->
+                                <img src="assets/img/kv/main02.jpg" alt="About Flower">
+                            </picture>
 
                         </div>
                     </div>
@@ -113,7 +128,7 @@
             <div class="l_main">
                 <div class="c_section">
                     <div class="c_section__header">
-                        <h2 class="c_section__header__title">SEASONAL FLOWER</h2>
+                        <h2 class="c_section__headerTitle">SEASONAL FLOWER</h2>
                     </div>
 
                     <div class="c_cards">

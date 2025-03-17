@@ -37,7 +37,11 @@
         }
     }
 
-    //TODOスライドショーのスタイル
+    //スライドショーのスタイル
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* ===============================================
@@ -75,7 +79,7 @@
             translate: -50% 0;
         }
 
-        &__title {
+        &Title {
             text-transform: uppercase;
             @include fz(16);
             @include font-webfont_Lato;
@@ -320,4 +324,207 @@
             width: 100%;
         }
     }
+}
+
+/* ===============================================
+# ポイント
+=============================================== */
+.c_point {
+    @include desktop {
+        background-color: #fff;
+    }
+
+    &__inner {
+        @include desktop {
+            max-width: 1000px;
+            padding: 50px 0;
+            margin: 0 auto;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 25px;
+        background-color: $color_bg;
+
+        @include desktop {
+            padding: 36px 25px;
+            margin-top: 40px;
+            flex-direction: row;
+        }
+    }
+
+    &__item {
+        padding: 20px;
+
+        @include touch {
+            background-color: #fff;
+        }
+
+        @include desktop {
+            width: calc(100%/3);
+            padding: 0 20px 58px;
+        }
+
+        &+& {
+            border-top: 2px solid $color_border;
+
+            @include desktop {
+                border-top: 0;
+                border-left: 2px solid $color_primary;
+            }
+        }
+
+        &Title {
+            @include fz(16);
+            font-weight: bold;
+            line-height: 1.65;
+
+            @include desktop {
+                @include fz(24);
+                line-height: 1.5;
+            }
+        }
+
+        &Text {
+            margin-top: 10px;
+            @include fz(16);
+            line-height: 1.5;
+
+            @include mobile {
+                @include mobile {
+                    @include fz(12);
+                }
+            }
+        }
+    }
+}
+
+//カート
+.c_cart {
+    padding-top: 25px;
+
+    &__inner {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        background-color: #fff;
+
+        &+& {
+            margin-top: 6px;
+        }
+
+        &Link {
+            display: flex;
+            padding: 20px;
+            text-decoration: none;
+        }
+
+        &Thumb {
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            flex-shrink: 0;
+
+            img {
+                object-fit: cover;
+                width: auto;
+                max-width: inherit;
+                height: 100%;
+            }
+        }
+
+        &Body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 20px;
+            flex: auto; //flex-grow:0; flex-shrink:1; flex-basis:auto;
+        }
+
+        &Price {
+            @include fz(18);
+            font-weight: bold;
+            text-align: end;
+        }
+    }
+
+    &__price {
+        margin: 20px 20px 0;
+
+        @include desktop {
+            margin: 30px 0 0
+        }
+
+        &Item {
+            font-weight: bold;
+            line-height: 1;
+            text-align: end;
+            @include fz(30);
+
+            &+& {
+                margin-top: 16px;
+
+                @include desktop {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        &Text {
+            @include fz(16);
+            margin-right: 10px;
+            font-weight: normal;
+        }
+    }
+}
+
+//ログイン
+.c_memberLogin {
+    padding-top: 40px;
+
+    @include desktop {
+        padding-top: 80px;
+    }
+}
+
+.c_form {
+    margin: 12px 15px 0;
+
+    @include desktop {
+        width: 400px;
+        margin: 60px auto 0;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+
+        &+& {
+            margin-top: 34px;
+        }
+    }
+
+    &__label {
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 12px 5px;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 0px;
+
+        &::placeholder {
+            color: #666;
+        }
+    }
+
+
 }
